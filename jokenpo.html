@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jokenpo - DEVDIEGOPAULO</title>
+    <link rel="stylesheet" href="./jokenpostyle.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>JokenPô</h1>
+      <section class="buttons">
+        <button id="rock" onclick="playHuman('rock'), changeMachineChoise()">&#x1F44A;</button>
+        <button id="paper" onclick="playHuman('paper')">&#x1f590;</button>
+        <button id="scissors" onclick="playHuman('scissors')">&#x270c;</button>
+      </section>
+      <p>Escolha da maquina: <span id="showChoiceMachine">Clique na sua escolha</span></p>
+
+
+      <p class="your-score">Sua pontuação: <span id="pointHuman">0</span></p>
+      <p class="machine-score">Pontuação da maquina: <span id="pointMachine">0</span></p>
+    </div>
+
+    <script src="./jokenposcript.js"></script>
+  </body>
+</html>

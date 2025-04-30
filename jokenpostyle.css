@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-image: url('./assetsjokenpo/back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    width: 380px;
+    height: 380px;
+}
+
+.container:hover {
+    width: 390px;
+    height: 390px;
+}
+
+.buttons {
+    display: flex;
+    gap: 30px;
+    margin: 30px 0px;
+}
+
+button {
+    padding: 10px;
+    font-size: 50px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    width: 90px;
+    height: 90px;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.7;
+    width: 95px;
+    height: 95px;
+}
+
+#rock {
+    background-color: blueviolet;
+}
+
+#paper {
+    background-color: aquamarine;
+}
+
+#scissors {
+    background-color: aqua;
+}
+
+p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.your-score span {
+    color: rgb(0, 0, 114);
+    font-size: 30px;
+}
+
+.machine-score span {
+    color: rgb(116, 0, 0);
+    font-size: 30px;
+}
