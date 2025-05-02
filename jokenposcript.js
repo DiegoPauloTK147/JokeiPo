@@ -1,13 +1,18 @@
+const result = document.querySelector('.result')
+const humanScore = document.querySelector('#human-score')
+const machineScore = document.querySelector('#machine-score')
+
+const rockMachine = document.getElementById('rock-machine')
+const paperMachine = document.getElementById('paper-machine')
+const scissorsMachine = document.getElementById('scissors-machine')
+
+let humanScoreNumber = 0
+let machineScoreNumber = 0
+
 const playHuman = (humanChoice) => {
-    console.log(humanChoice)
-    changeMachineChoise()
+    playTheGame(humanChoice, playMachine())
 }
 
-function changeMachineChoise() {
-    const span = document.getElementById('showChoiceMachine');
-    span.textContent = playMachine()
-}
-    
 
 
 const playMachine = () => {
@@ -19,15 +24,39 @@ const playMachine = () => {
     return choices[randomNumber]
 }
 
+const playTheGame = (human, machine) => {
+    console.log("Humano: " + human + "Maquina: " + machine)
 
-const pointHuman = document.getElementById("pointHuman")
+    if(human === machine){
+        result.innerHTML = "Deu empate!"
+    } else if ( (human === 'paper' && machine === 'rock') ||
+                (human === 'rock' && machine === 'scissors') ||
+                (human === 'scissors' && machine === 'paper') ){
+        humanScoreNumber++
+        humanScore.innerHTML = humanScoreNumber
+        result.innerHTML = "Você ganhou!"
+    } else {
+        result.innerHTML = "Você perdeu!"
 
-pointHuman = 0
-
-const pointMachine = document.getElementById("pointMachine")
-
-pointMachine = 0
-
-if (playHuman === playMachine){
-    console.log("empate")
+        machineScoreNumber++
+        machineScore.innerHTML = humanScoreNumber
+    }
+    
+    if (machine === 'rock') {
+        rockMachine.style.backgroundColor = "red"
+        scissorsMachine.style.backgroundColor = "black"
+        paperMachine.style.backgroundColor = "black"
+    } else if (machine === 'paper') {
+        rockMachine.style.backgroundColor = "black"
+        scissorsMachine.style.backgroundColor = "black"
+        paperMachine.style.backgroundColor = "red"
+    } else if (machine === 'scissors') {
+        rockMachine.style.backgroundColor = "black"
+        scissorsMachine.style.backgroundColor = "red"
+        paperMachine.style.backgroundColor = "black"
+    }
 }
+
+function reiniciarJogo() {
+    location.reload();
+  }

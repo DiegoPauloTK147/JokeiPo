@@ -9,17 +9,27 @@
   <body>
     <div class="container">
       <h1>JokenPô</h1>
+      <h3>Escolha um:</h3>
       <section class="buttons">
-        <button id="rock" onclick="playHuman('rock'), changeMachineChoise()">&#x1F44A;</button>
+        <button id="rock" onclick="playHuman('rock')">&#x1F44A;</button>
         <button id="paper" onclick="playHuman('paper')">&#x1f590;</button>
         <button id="scissors" onclick="playHuman('scissors')">&#x270c;</button>
       </section>
-      <p>Escolha da maquina: <span id="showChoiceMachine">Clique na sua escolha</span></p>
+    
+      <h3>Escolha da maquina:</h3>
+      <section class="buttons">
+        <button id="rock-machine">&#x1F44A;</button>
+        <button id="paper-machine">&#x1f590;</button>
+        <button id="scissors-machine">&#x270c;</button>
+      </section>
+      <p class="result"></p>
 
+      <p class="your-score">Sua pontuação: <span id="human-score">0</span></p>
+      <p class="machine-score">Pontuação da maquina: <span id="machine-score">0</span></p>
 
-      <p class="your-score">Sua pontuação: <span id="pointHuman">0</span></p>
-      <p class="machine-score">Pontuação da maquina: <span id="pointMachine">0</span></p>
+      <button class="reiniciar" onclick="reiniciarJogo()">REINICIAR</button>
     </div>
+
 
     <script src="./jokenposcript.js"></script>
   </body>

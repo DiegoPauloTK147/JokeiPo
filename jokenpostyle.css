@@ -27,13 +27,10 @@ body {
     justify-content: center;
     transition: all 0.2s ease-in-out;
     width: 380px;
-    height: 380px;
+    height: 700px;
 }
 
-.container:hover {
-    width: 390px;
-    height: 390px;
-}
+
 
 .buttons {
     display: flex;
@@ -62,12 +59,30 @@ button:hover {
     background-color: blueviolet;
 }
 
+#rock-machine {
+    background-color: rgb(0, 0, 0);
+    width: 90px;
+    height: 90px;
+}
+
 #paper {
     background-color: aquamarine;
 }
 
+#paper-machine {
+    background-color: rgb(0, 0, 0);
+    width: 90px;
+    height: 90px;
+}
+
 #scissors {
     background-color: aqua;
+}
+
+#scissors-machine {
+    background-color: rgb(0, 0, 0);
+    width: 90px;
+    height: 90px;
 }
 
 p {
@@ -83,4 +98,20 @@ p {
 .machine-score span {
     color: rgb(116, 0, 0);
     font-size: 30px;
+}
+
+.reiniciar{
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    background-color: orange;
+    color: aliceblue;
+}
+.reiniciar:hover{
+    width: 210px;
+    height: 55px;
+    font-size: 20px;
+    background-color: rgb(137, 90, 3);
+    color: aliceblue;
+    opacity: 1;
 }
